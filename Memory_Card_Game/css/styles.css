@@ -1,0 +1,538 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-image: url('../images/card-bg-pattern.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  display: none;
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card.show img,
+.card.matched img {
+  display: block;
+}
+
+.card.show,
+.card.matched {
+  background-color: #fff;
+}
+
+.card.matched {
+  filter: blur(5px);
+}
+
+.info-box {
+  background-color: #e0f7fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+.congratulations {
+  display: none;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  padding-top: 50px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+}
+
+.card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 6px;
+  display: none;
+}
+
+.card.show img,
+.card.matched img {
+  display: block;
+}
+
+.card.matched {
+  background-color: #28a745;
+  cursor: not-allowed;
+}
+
+.congratulations {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#fireworkContainer {
+  margin-top: 20px;
+}
+
+#preGameButtons button,
+#inGameButtons button {
+  margin: 0 10px;
+}
+
+#inGameButtons {
+  margin-top: 20px;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-image: url('../images/card-bg-pattern.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  display: none;
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card.show img,
+.card.matched img {
+  display: block;
+}
+
+.card.show,
+.card.matched {
+  background-color: #fff;
+}
+
+.card.matched {
+  filter: blur(5px);
+}
+
+.info-box {
+  background-color: #e0f7fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+.congratulations {
+  display: none;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.firework-container {
+  display: none;
+  margin-top: 20px;
+}
+
+#preGameButtons button,
+#inGameButtons button {
+  margin: 0 10px;
+  border-radius: 8px; /* Added border-radius for button styling */
+}
+
+#inGameButtons {
+  margin-top: 20px;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-image: url('../images/card-bg-pattern.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  display: none;
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card.show img,
+.card.matched img {
+  display: block;
+}
+
+.card.show,
+.card.matched {
+  background-color: #fff;
+}
+
+.card.matched {
+  filter: blur(5px);
+}
+
+.info-box {
+  background-color: #e0f7fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+/* Flexbox styling for Moves, Time, and Score with space between */
+.info-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em;
+}
+
+.congratulations {
+  display: none;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.firework-container {
+  display: none;
+  margin-top: 20px;
+}
+
+#preGameButtons button,
+#inGameButtons button {
+  margin: 0 10px;
+  border-radius: 8px;
+}
+
+#inGameButtons {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    width: 80px;
+    height: 80px;
+  }
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-image: url('../images/card-bg-pattern.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  display: none;
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card.show img,
+.card.matched img {
+  display: block;
+}
+
+.card.show,
+.card.matched {
+  background-color: #fff;
+}
+
+.card.matched {
+  filter: blur(5px);
+}
+
+.info-box {
+  background-color: #e0f7fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+.congratulations {
+  display: none;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .display-4{
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+#fireworkContainer {
+  margin-top: 20px;
+}
+
+.congratulations {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  border-radius: 10px;
+}
+
+.firework-container {
+  display: none;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  z-index: 999;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Card Game</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container text-center mt-4">
+    <header class="mb-4">
+      <h1 class="display-4">Memory Card Game</h1>
+      <p id="difficultyLevel" class="mt-3"></p>
+      <div id="infoSection" class="row justify-content-center mt-3">
+        <div class="col-md-4 col-sm-6">
+          <div class="info-box p-3">
+            <!-- Moves, Time, and Score on a Single Line -->
+            <div class="d-flex justify-content-between">
+              <p>Moves: <span id="moveCount">0</span></p>
+              <p>Time: <span id="timer">0:00</span></p>
+              <p>Score: <span id="score">0</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Buttons for selecting difficulty level -->
+      <div class="btn-group mt-3" id="preGameButtons">
+        <button id="easyBtn" class="btn btn-info">Easy</button>
+        <button id="mediumBtn" class="btn btn-warning">Medium</button>
+        <button id="hardBtn" class="btn btn-danger">Hard</button>
+      </div>
+      <!-- Buttons visible during the game -->
+      <div class="btn-group mt-3" id="inGameButtons" style="display: none;">
+        <button id="resetBtn" class="btn btn-secondary">Reset</button>
+        <button id="pauseBtn" class="btn btn-warning">Pause</button>
+        <button id="resumeBtn" class="btn btn-success" style="display: none;">Resume</button>
+        <button id="quitBtn" class="btn btn-danger">Quit</button>
+      </div>
+    </header>
+
+    <div class="grid-container" id="cardGrid"></div>
+
+    <!-- Congratulations Modal -->
+    <div id="congratsMessage" class="congratulations">
+      <h2>Congratulations!</h2>
+      <p>You matched all the pairs!</p>
+      <p>Total Moves: <span id="totalMoves">0</span></p>
+      <p>Total Time: <span id="totalTime">0:00</span></p>
+      <p>Your final score is: <span id="finalScore">0</span></p>
+      <button id="playAgainBtn" class="btn btn-success mt-3">Play Again</button>
+      <button id="exitBtn" class="btn btn-danger mt-3">Exit</button>
+    </div>
+    
+    <div id="firework-container" class="firework-container"></div>
+    
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.min.js"></script>
+</body>
+</html>
